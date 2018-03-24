@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace GameJam16
 {
-    [RequireComponent(typeof(PlayerController))]
+    
     [RequireComponent(typeof(Animator))]
     public class PlayerAnim : MonoBehaviour
     {
-        private PlayerController player;
+        public PlayerController player;
         private Animator anim;
 
         void OnEnable()
@@ -25,7 +25,7 @@ namespace GameJam16
         void Start()
         {
             anim = GetComponent<Animator>();
-            player = GetComponent<PlayerController>();
+           
             player.onPunch += OnPunch;
         }
 

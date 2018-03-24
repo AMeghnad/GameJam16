@@ -4,9 +4,6 @@ using UnityEngine;
 
 namespace GameJam16
 {
-    [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(Animator))]
-    [RequireComponent(typeof(SpriteRenderer))]
     public class PlayerController : MonoBehaviour
     {
         public float inputH, inputV;
@@ -19,7 +16,7 @@ namespace GameJam16
 
         public BoolCallback onPunch;
         public BoolCallback onKick;
-        
+
         // Update is called once per frame
         void Update()
         {
@@ -30,7 +27,7 @@ namespace GameJam16
         {
             // Movement
             CharacterController controller = GetComponent<CharacterController>();
-            movement = new Vector3(inputH, inputV);
+            movement = new Vector3(inputH, 0, inputV);
             movement *= movementSpeed * Time.deltaTime;
             transform.Translate(movement);
         }
