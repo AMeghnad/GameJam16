@@ -9,13 +9,13 @@ namespace GameJam16
         public float inputH, inputV;
         public float movementSpeed = 5f;
         public bool isPunching = false;
-        public bool isKicking = false;
+        public bool isShooting = false;
 
         private Vector3 movement;
         private Animator anim;
 
         public BoolCallback onPunch;
-        public BoolCallback onKick;
+        public BoolCallback onShoot;
 
         // Update is called once per frame
         void Update()
@@ -45,14 +45,14 @@ namespace GameJam16
             }
         }
 
-        public void Kick()
+        public void TattooGun()
         {
-            //Kick logic
+            // Gun logic
 
             // Invoke event
-            if (onKick != null)
+            if (onShoot != null)
             {
-                onKick.Invoke(isKicking);
+                onShoot.Invoke(isShooting);
             }
         }
 
