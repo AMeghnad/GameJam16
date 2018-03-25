@@ -27,9 +27,15 @@ namespace GameJam16
             float inputV = Input.GetAxis("Vertical");
             player.Move(inputH, inputV);
 
-            // Example:
-            // if( player jump) {
-            // player.Jump()
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Punch();
+            }
+        }
+
+        void Punch()
+        {
+
         }
     }
 }
