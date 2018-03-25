@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour {
-    public Transform SpawnerA;
-
+public class NavmeshAgent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
